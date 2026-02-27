@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://3sayjvukgrof"]
+
+[ext_resource type="Script" uid="uid://gawbwqsjhruy" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://j2wrs40clo4m" path="res://assets/kenney_platformercharacters/PNG/Zombie/Poses/zombie_idle.png" id="2_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(47, 83)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i3pqv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=2145800601]
+script = ExtResource("1_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=182666517]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_hqtel")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1625148530]
+sprite_frames = SubResource("SpriteFrames_sweqy")
+animation = &"idle"

@@ -1,0 +1,1 @@
+fitur tambahan : double jump, flip sprite
