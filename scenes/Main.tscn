@@ -2,17 +2,37 @@
 
 [ext_resource type="PackedScene" uid="uid://ds60n6krsavle" path="res://scenes/Ground.tscn" id="1_elqb8"]
 [ext_resource type="PackedScene" uid="uid://3sayjvukgrof" path="res://scenes/player.tscn" id="2_rvslj"]
+[ext_resource type="PackedScene" uid="uid://dxnqlrm31a44j" path="res://Goblin.tscn" id="3_0bbpv"]
+[ext_resource type="AudioStream" uid="uid://b8wp0xacd0dxf" path="res://assets/410574__manuelgraf__game-background-music-loop-short.mp3" id="3_rarhs"]
 
 [node name="Root" type="Node2D" unique_id=918599496]
 
 [node name="Ground" parent="." unique_id=673580990 instance=ExtResource("1_elqb8")]
-position = Vector2(296, 324)
+position = Vector2(231, 325)
 
 [node name="Ground2" parent="." unique_id=1551337937 instance=ExtResource("1_elqb8")]
-position = Vector2(856, 324)
+position = Vector2(928, 392)
 
 [node name="Ground3" parent="." unique_id=1648397147 instance=ExtResource("1_elqb8")]
 position = Vector2(576, 394)
 
 [node name="CharacterBody2D" parent="." unique_id=2145800601 instance=ExtResource("2_rvslj")]
-position = Vector2(589, 278)
+position = Vector2(533, 274)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=554042441]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=224485855]
+stream = ExtResource("3_rarhs")
+autoplay = true
+
+[node name="Goblin Torch" parent="." unique_id=1383867727 instance=ExtResource("3_0bbpv")]
+position = Vector2(1202, 331)
+
+[node name="Ground4" parent="." unique_id=1211280659 instance=ExtResource("1_elqb8")]
+position = Vector2(1274, 391)
+
+[node name="Ground5" parent="." unique_id=941484559 instance=ExtResource("1_elqb8")]
+position = Vector2(1628, 331)
+
+[node name="Ground6" parent="." unique_id=1576057304 instance=ExtResource("1_elqb8")]
+position = Vector2(4739, 543)
